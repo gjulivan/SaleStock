@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <style>
+       
+        #fixed {
+            height: 400px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div when-scrolled="LoadMore()" id="fixed">
+        <table class="table striped">
+                        <thead>
+                            <tr>
+                                <th class="sortable-column" ng-repeat="property in PropertyAttr">{{property}}</th>
+                            </tr>
+                            <tr ng-repeat="swobject in SWObjectDetailList.Value track by $index">
+                               
+                                 <td ng-repeat="property in PropertyAttr" ng-click="LoadDetail(swobject)"
+                                     contenteditable="false" >{{swobject[property]}}</td>
+                            </tr>
+                        </thead>
+
+		</table>
+
+    
+    <a ng-if="IsNextAvailable" ng-click="LoadMore()">Load More</a>
+</div>
+	
+
+
+    
+</body>
+</html>

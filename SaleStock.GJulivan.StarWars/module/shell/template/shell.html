@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <header id="header">
+				<h1>Star Wars</h1>
+	</header>
+    <div class="app-bar">
+            <a class="app-bar-element" ng-repeat="swobject in SWObjectList.Value track by $index"
+                ng-click="LoadPage(swobject.value)">{{swobject.name}}</a>
+    </div>
+    <div ng-switch="ViewState.Value">
+        <div ng-switch-when="Main">
+            <div ng-include="'module/main/template/main.html'" ng-controller="maincontroller"></div>
+        </div>
+       <div ng-switch-when="Detail">
+            <div ng-include="'module/main/template/detail.html'" ng-controller="detailcontroller"></div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

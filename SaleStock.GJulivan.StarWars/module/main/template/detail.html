@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+    
+    </style>
+</head>
+<body>
+     <span>detail view</span>
+     <div id="container">
+        <div id="row" ng-repeat="property in PropertyAttr">
+  	        <div id="left">
+                  {{property}}
+  	        </div>
+  	        <div id="middle">
+  		        <h4>:</h4>
+  	        </div>
+  	        <div id="right">
+                  {{CurrentData[property]}}
+  	        </div>
+	    </div>
+    </div> 
+</body>
+</html>

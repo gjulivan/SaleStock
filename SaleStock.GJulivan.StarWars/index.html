@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+		<title>Salestock &amp; Starwars API • Infinite Scroll</title>
+
+
+
+</head>
+<body ng-app="salestock">
+    <div ng-controller="shellcontroller"  ng-include="'module/shell/template/shell.html'"></div>
+
+
+    <script src="js/extension/angular/angular.js"></script>
+    <script src="js/extension/angular/angularfire.min.js"></script>
+    
+    <script src="js/directives/whenScrolled.js"></script>
+    <script src="js/app/constant.js"></script>
+    <script src="js/services/dataservice.js"></script>
+    <script src="js/services/dataProcessor.js"></script>
+    <script src="js/services/hubservice.js"></script>
+
+    <script src="module/main/controller/detailcontroller.js"></script>
+    <script src="module/main/controller/maincontroller.js"></script>
+    <script src="module/shell/controller/shellcontroller.js"></script>
+    <script src="js/app/bootstrapper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿#container {
+    display: table;
+    }
+
+    #row  {
+    display: table-row;
+    }
+
+    #left, #right, #middle {
+    display: table-cell;
+    }
