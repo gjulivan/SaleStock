@@ -1,0 +1,5 @@
+D:\Documents\GitHub\SaleStock\SaleStock\SaleStock.GJulivan.StarWars\bin\SaleStock.GJulivan.StarWars.dll
+D:\Documents\GitHub\SaleStock\SaleStock\SaleStock.GJulivan.StarWars\bin\SaleStock.GJulivan.StarWars.pdb
+D:\Documents\GitHub\SaleStock\SaleStock\SaleStock.GJulivan.StarWars\obj\Debug\SaleStock.GJulivan.StarWars.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\SaleStock\SaleStock\SaleStock.GJulivan.StarWars\obj\Debug\SaleStock.GJulivan.StarWars.dll
+D:\Documents\GitHub\SaleStock\SaleStock\SaleStock.GJulivan.StarWars\obj\Debug\SaleStock.GJulivan.StarWars.pdb
