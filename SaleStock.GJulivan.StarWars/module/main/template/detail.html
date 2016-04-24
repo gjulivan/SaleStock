@@ -17,7 +17,10 @@
   		        <h4>:</h4>
   	        </div>
   	        <div id="right">
-                  {{CurrentData[property]}}
+                  <div ng-if="IsArray(CurrentData[property])">
+                      <detail-view ng-repeat="data in CurrentData[property]"  value="data" on-data-click="LoadData(data)"></detail-view>
+                  </div>
+                  <detail-view ng-if="!IsArray(CurrentData[property])" value="CurrentData[property]" on-data-click="LoadData(CurrentData[property])"></detail-view>
   	        </div>
 	    </div>
     </div> 

@@ -17,5 +17,7 @@ var eventEnum = {
     SwitchPage: "SwitchPage",
     RequestDataCompleted: "RequestDataCompleted",
     RequestDetailCompleted: "RequestDetailCompleted",
+    RequestDetailChanged: "RequestDetailChanged",
+    ProcessRequestDetailChanged: "ProcessRequestDetailChanged",
     ProcessDetailList: "ProcessDetailList"
 }

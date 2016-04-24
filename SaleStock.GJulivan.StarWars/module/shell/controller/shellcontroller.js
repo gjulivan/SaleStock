@@ -27,6 +27,11 @@
         $scope.$broadcast(eventEnum.ProcessDetailList, undefined);
     });
 
+    $rootScope.$on(eventEnum.RequestDetailChanged, function (event, args) {
+        dataservice.SetSelectedData(args.Value);
+        $scope.$broadcast(eventEnum.ProcessRequestDetailChanged, undefined);
+    });
+
     $scope.$on(eventEnum.SwitchPage, function (event, args) {
         $scope.ViewState.Value = args.Value;
     });

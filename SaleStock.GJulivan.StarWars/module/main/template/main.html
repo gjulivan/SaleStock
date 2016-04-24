@@ -21,14 +21,16 @@
                             <tr ng-repeat="swobject in SWObjectDetailList.Value track by $index">
                                
                                  <td ng-repeat="property in PropertyAttr" ng-click="LoadDetail(swobject)"
-                                     contenteditable="false" >{{swobject[property]}}</td>
+                                     contenteditable="false" >{{swobject[property]}}
+
+                                 </td>
                             </tr>
                         </thead>
 
 		</table>
 
     
-    <a ng-if="IsNextAvailable" ng-click="LoadMore()">Load More</a>
+    <a ng-if="IsNextAvailable" ng-click="LoadMore()">{{LoadMoreLabel}}</a>
 </div>
 	
 

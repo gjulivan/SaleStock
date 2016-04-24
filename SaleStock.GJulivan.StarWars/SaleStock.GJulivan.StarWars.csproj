@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="js\app\constant.js" />
+    <Content Include="js\directives\detailView.js" />
     <Content Include="js\directives\whenScrolled.js" />
     <Content Include="js\extension\angular\angular.js" />
     <Content Include="js\extension\angular\angularfire.min.js" />

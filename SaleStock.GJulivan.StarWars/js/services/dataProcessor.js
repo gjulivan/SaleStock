@@ -12,6 +12,7 @@
 
         return list;
     }
+
     function ProcessDetailList(data) {
         dataservice.SetNextRequestUrl(data.next);
         for (var idx = 0; idx < data.results.length; idx++) {
@@ -19,6 +20,8 @@
         }
         return dataservice.GetDetailList();
     }
+
+
 
 
     return {

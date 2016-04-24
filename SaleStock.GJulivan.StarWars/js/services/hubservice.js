@@ -13,9 +13,22 @@
         return url;
     }
 
+
+    function RequestData(url) {
+        url = ValidateUrl(url);
+        var oReq = new XMLHttpRequest();
+        oReq.open('GET', url, false);
+        oReq.send();
+
+        if (oReq.status === 200) {
+            return JSON.parse( oReq.responseText);
+        }
+
+    }
+
     function RequestDataAsync(url, callbackEvent) {
         url = ValidateUrl(url);
-        oReq = new XMLHttpRequest();
+        var oReq = new XMLHttpRequest();
         oReq.onload = function (e) {
             var xhr = e.target;
             if (xhr.responseType === 'json') {
@@ -25,16 +38,36 @@
             }
         };
         oReq.onreadystatechange = function () {
-            
+
         };
         oReq.open('GET', url, true);
         oReq.responseType = 'json';
         oReq.send();
     }
 
+    function RequestDataAsyncWithCallBackFunction(url, callbackFunction) {
+        url = ValidateUrl(url);
+        var oReq = new XMLHttpRequest();
+        oReq.onload = function (e) {
+            var xhr = e.target;
+            if (xhr.responseType === 'json') {
+                callbackFunction(xhr.response );
+            } else {
+                callbackFunction(JSON.parse(xhr.responseText));
+            }
+        };
+        oReq.onreadystatechange = function () {
+
+        };
+        oReq.open('GET', url, true);
+        oReq.responseType = 'json';
+        oReq.send();
+    }
 
     return {
-        RequestDataAsync: RequestDataAsync
+        RequestDataAsync: RequestDataAsync,
+        RequestDataAsyncWithCallBackFunction:RequestDataAsyncWithCallBackFunction,
+        RequestData: RequestData
     };
 
 }

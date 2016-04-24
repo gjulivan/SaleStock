@@ -1,10 +1,12 @@
 ﻿var maincontroller = function ($scope, hubservice, dataservice) {
 
+    $scope.LoadMoreLabel = "Please Select a Category...";
     $scope.SWObjectDetailList = { Value: [] };
     $scope.IsNextAvailable = true;
     $scope.PropertyAttr = [];
     function UpdateData() {
         $scope.$apply(function () {
+            $scope.LoadMoreLabel = "Load More...";
             $scope.IsNextAvailable = dataservice.GetNextRequestUrl() != null;
             $scope.SWObjectDetailList.Value = dataservice.GetDetailList();
             $scope.PropertyAttr = dataservice.GetPropertyAttributes();
